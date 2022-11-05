@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    height: 100vh;
+
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    height: 100%;
+    align-items: center;
+}
+
+.col-md{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid #f2f2f2;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.product__picture{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.products__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.product__picture::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.776), rgba(255, 255, 255, 0.341));
+}
+
+.product__content{
+    padding: 1rem;
+    text-align: justify;
+}
+
+.product__content h2{
+    font-weight: 600;
+    text-align: left;
+}
+
+.product__imgs{
+    margin: 3rem 0;
+    outline: 1px solid #f2f2f2;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product__imgs img{
+    width: 50px;
+    height: 50px;
+    outline: 1px solid black;
+    border-radius: .1rem;
+}
+
+
+
+.product__content span{
+    display: inline-block;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+span.priceOld{
+    transform: scale(.6);
+    transform-origin: right; 
+    transition: transform .1s ease;
+    text-decoration: line-through;
+    font-weight: 600;
+}
+
+.product__content p {
+    font-weight: 600;
+    padding: 1rem 0;
+    font-size: 14px;
+    color: #0000006b;
+}
+
+.tags{
+    list-style: none;
+    margin: .5rem 0;
+    display: flex;
+    gap: .5rem;
+    width: 50px;
+}
+
+.tags li a {
+    font-size: 1rem;
+    color: #cfcdcd;
+    text-decoration: none;
+    /* aprender sobre child flex */
+    /* flex-grow: 1; */
+}
+
+.btn{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #b8b6b6;
+    color: white;
+    border: 0;
+    outline: 1px solid white;
+    border-radius: .5rem;
+    font-family: inherit;
+}
+
+@media (min-width:800px) {
+    .product{
+        flex-direction: row;
+        height: 400px;
+    }
+
+    .product__imgs{
+        margin: 1rem 0;
+    }
+    
+
+    .btn{
+        width: 30%;
+    }
+}
