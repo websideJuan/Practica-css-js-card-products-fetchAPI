@@ -34,7 +34,7 @@ const pintarProducts = (data) => {
             const tagsElement = productCarId.querySelector('.tags')
             tagsElement.innerHTML = `<li><a>#${tags}</a></li>`
         })
-        s
+        
 
         const clone = productCarId.cloneNode(true)
 
